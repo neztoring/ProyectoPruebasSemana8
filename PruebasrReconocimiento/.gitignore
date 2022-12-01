@@ -2,3 +2,13 @@ cypress/integration/monkey/node_modules/
 cypress/screenshots
 cypress/videos
 node_modules/
+node_modules/
+
+.png\n*
+screenshots*/
+temp*/
+*graph.json
+*graph2.json
+*graph3.json
+firebaseConfig.js
+results/

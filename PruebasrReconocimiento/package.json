@@ -24,6 +24,8 @@
   },
   "dependencies": {
     "cypress": "^4.2.0",
-    "faker": "^4.1.0"
+    "faker": "^4.1.0",
+    "node-html-parser": "^1.2.12",
+    "playwright": "^0.11.1"
   }
 }
