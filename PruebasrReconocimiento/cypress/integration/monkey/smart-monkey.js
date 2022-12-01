@@ -3,8 +3,11 @@ require('cypress-plugin-tab');
 var fs = require('fs');
 var faker = require('faker');
 
-const url = Cypress.config('baseUrl') || "https://uniandes.edu.co/";
-const appName = Cypress.env('appName')|| "your app";
+const USERNAME = 'a.reyna@uniandes.edu.co';
+const PASSWORD = 'Naranjo248.';
+
+const url = Cypress.config('baseUrl') || "http://localhost:2368/ghost/";
+const appName = Cypress.env('appName')|| "Ghost";
 const events = Cypress.env('events')|| 100;
 const delay = Cypress.env('delay') || 100;
 var seed = Cypress.env('seed');
@@ -300,11 +303,11 @@ function avPag(){
     if(curPageMaxY - curY >= viewportHeight){ 
         if(curPageMaxY - (curY + viewportHeight) >= viewportHeight){
             curY = curY + viewportHeight
-            cy.scrollTo(curX, curY)
+            cy.get('main').scrollTo(curX, curY, { ensureScrollable: false })
         } 
         else{
             curY = curPageMaxY - viewportHeight
-            cy.scrollTo(curX, curY)
+            cy.get('main').scrollTo(curX, curY, { ensureScrollable: false })
             info += "Page limit reached! "
         }
         info += `Successfully scrolled down from y=${prev} to y=${curY}`
@@ -324,12 +327,12 @@ function rePag(){
     else{
         if(viewportHeight > curY){
             curY =  0
-            cy.scrollTo(curX, curY)
+            cy.get('main').scrollTo(curX, curY, { ensureScrollable: false })
             info += "Page limit reached! "
         }
         else{
             curY = curY - viewportHeight
-            cy.scrollTo(curX, curY)
+            cy.get('main').scrollTo(curX, curY, { ensureScrollable: false })
         }
         info += `Successfully scrolled up from y=${prev} to y=${curY}`
     }
@@ -342,11 +345,11 @@ function horizontalScrollFw(){
     if(curPageMaxX - curX >= viewportWidth){ 
         if(curPageMaxX - (curX + viewportWidth) >= viewportWidth){
             curX = curX + viewportWidth
-            cy.scrollTo(curX, curY)
+            cy.get('main').scrollTo(curX, curY, { ensureScrollable: false })
         } 
         else{
             curX = curPageMaxX - viewportWidth
-            cy.scrollTo(curX, curY)
+            cy.get('main').scrollTo(curX, curY, { ensureScrollable: false })
             info += "Page limit reached! "
         }
         info += `Successfully scrolled to the right from x=${prev} to x=${curX}`
@@ -366,12 +369,12 @@ function horizontalScrollBk(){
     else{
         if(viewportWidth > curX){
             curX =  0
-            cy.scrollTo(curX, curY)
+            cy.get('main').scrollTo(curX, curY, { ensureScrollable: false })
             info += "Page limit reached! "
         }
         else{
             curX = curX - viewportWidth
-            cy.scrollTo(curX, curY)
+            cy.get('main').scrollTo(curX, curY, { ensureScrollable: false })
         }
         info += `Successfully scrolled to the left from x=${prev} to x=${curX}`
     }
@@ -400,7 +403,7 @@ function enter(){
 function typeCharKey(){
     let info = ""
     let chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
-    let type = chars.charAt(getRandomInt(0, chars.length-1))
+    let type = chars.charAt(getRandomInt(1, chars.length-1))
     if(focused){
         cy.focused().type(type)
         info = `Pressed the ${type} key on the element in focus`
@@ -414,8 +417,8 @@ function typeCharKey(){
 
 function spkeypress(){
     let info = ""
-    const specialKeys = ["{{}","{backspace}", "{del}","{downarrow}", "{end}", "{esc}","{home}",  "{leftarrow}", "{pagedown}", "{pageup}", "{rightarrow}", "{selectall}", "{uparrow}"]
-    const modifiers = ["{alt}", "{ctrl}", "{meta}", "{shift}", ""]
+    const specialKeys = ["{backspace}", "{del}","{downarrow}", "{end}", "{esc}","{home}",  "{leftarrow}", "{pagedown}", "{pageup}", "{rightarrow}", "{selectall}", "{uparrow}"]
+    const modifiers = ["{alt}", "{ctrl}", "{meta}", "{shift}"]
     let modIndex = getRandomInt(0, modifiers.length-1)
     let spkIndex = getRandomInt(0, specialKeys.length-1)
     let type = modifiers[modIndex] + specialKeys[spkIndex]
@@ -633,7 +636,7 @@ const functions = [
     [typeCharKey], 
     [spkeypress, enter], 
     [reload, navBack, navForward],
-    [changeViewport, clearCookies, clearLocalStorage],
+    [changeViewport, clearLocalStorage],
     [fillInput, clearInput, clickRandAnchor, clickRandButton]
 ];
 
@@ -677,6 +680,10 @@ describe( `${appName} under smarter monkeys`, function() {
                 curPageMaxX = Math.max( d.body.scrollWidth, d.body.offsetWidth, d.documentElement.clientWidth, d.documentElement.scrollWidth, d.documentElement.offsetWidth) - win.innerWidth
             })
             cy.wait(1000)
+            cy.get('input[name=identification]').type(USERNAME)
+            cy.get('input[name=password]').type(PASSWORD)
+            cy.get(`#ember10`).click()
+            cy.wait(5000);
             //Add an event for each type of event in order to enter the else statement of randomEvent method
             for(let i = 0; i < events + 7; i++){
                 evtIndex++
