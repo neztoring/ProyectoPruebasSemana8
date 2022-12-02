@@ -16,18 +16,23 @@
 ******
   
 **2.1 Pruebas Playwright**
+
+La pruebas e2e para capturar los screenshots se realizaron utilizando la herramienta Playwright, Los escenarios se implementaron para ejecutarse en las versiones Ghost 3.42 y 5.18
   
   **Ghost v3.42**
-  -**Proyecto**: El proyecto se encuentra en la ruta **PruebasE2E\VRT\Ghost-test-Playwright\Ghost-3.42**
-  - **Configuración**: En el archivo Ghost-test-Playwright\Ghost-3.42\config.js se define las propiedades usuario, password y url del ambiente donde se ejecutaran los escenarios de prueba
+  
+  - **Fuentes**: El proyecto se encuentra en la ruta **PruebasE2E\VRT\Ghost-test-Playwright\Ghost-3.42**
+  - **Configuración**: En el archivo **PruebasE2E\VRT\Ghost-test-Playwright\Ghost-3.4\config.js** se define las propiedades usuario, password y url del ambiente donde se ejecutaran los escenarios de prueba
   - **Escenarios de pruebas** : Se encuentran en la ruta **PruebasE2E\VRT\Ghost-test-Playwright\Ghost-3.42\escenarios**
   - **Screenshots**: Se encuentran en la ruta **PruebasE2E\VRT\Ghost-test-Playwright\Ghost-3.42\resultado\[NombreModulo]\[NombreEscenario]**  **NombreModulo** ej: tag, post,member ect. **NombreEsceario** ej: CrearTagPositivo, CrearTagNegativo
   
   
 **Ghost v5.18**
-  - **Configuración**: En el archivo Ghost-test-Playwright\Ghost-5.18\config.cjs se define las propiedades usuario, password y url del ambiente donde se ejecutaran los escenarios de prueba
-  - **Escenarios de pruebas** : Se encuentran en la ruta Ghost-Test\Ghost-test-Playwright\Ghost-5.18\ 
-  - **Screenshots**: Se encuentran en la ruta Ghost-5.18\resultado\ donde podra encontrar una carpeta por módulo que reune varios escenarios de prueba
+
+  - **Fuentes**: El proyecto se encuentra en la ruta **PruebasE2E\VRT\Ghost-test-Playwright\Ghost-5.18**
+  - **Configuración**: En el archivo **PruebasE2E\VRT\Ghost-test-Playwright\Ghost-5.18\config.js** se define las propiedades usuario, password y url del ambiente donde se ejecutaran los escenarios de prueba
+  - **Escenarios de pruebas** : Se encuentran en la ruta **PruebasE2E\VRT\Ghost-test-Playwright\Ghost-5.18\escenarios**
+  - **Screenshots**: Se encuentran en la ruta **PruebasE2E\VRT\Ghost-test-Playwright\Ghost-5.18\resultado\[NombreModulo]\[NombreEscenario]**  **NombreModulo** ej: tag, post,member ect. **NombreEsceario** ej: CrearTagPositivo, CrearTagNegativo
   
 **2.2 Pruebas VRT**
 
