@@ -15,7 +15,7 @@
 **2.Pruebas VRT**
 ******
   
-**2.1 Pruebas para tomrar screenshots con Playwright**
+**2.1 Pruebas e2e para tomar screenshots con Playwright**
 
 La pruebas e2e para capturar los screenshots se realizaron utilizando la herramienta Playwright, Los escenarios se implementaron para ejecutarse en las versiones Ghost 3.42 y 5.18.
 
