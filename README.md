@@ -62,7 +62,7 @@ Para el reporte de comparación de los screenshots de las Pruebas VRT se utiliza
  1. En el archivo **PruebasE2E\VRT\Ghost-test-Playwright\Ghost-3.4\config.js** colocar la URL de la version de Ghost 3.42 y el usuario y password registrado
  2. En el archivo **PruebasE2E\VRT\Ghost-test-Playwright\Ghost-5.18\config.js** colocar la URL de la version de Ghost 5.18 y el usuario y password registrado
 3. En una ventana cmd ubicarse en el directorio **PruebasE2E\VRT\Ghost-PruebasDeRegresion\** y ejecutar el comando  **npm install**
-4. Ejecutar el comando **node TestVRT.js
+4. Ejecutar el comando **node TestVRT.js**
 5. Después de teminada la ejecución del comando anterior puede verificar los resultados de la siguiente manera:
    - **Screenshots v3.42**: **PruebasE2E\VRT\Ghost-test-Playwright\Ghost-3.42\resultado\[NombreModulo]\[NombreEscenario]**  **NombreModulo** ej: tag, post,member ect. **NombreEsceario** ej: CrearTagPositivo, CrearTagNegativo
    - **Screnshots 5.18**: **PruebasE2E\VRT\Ghost-test-Playwright\Ghost-5.18\resultado\[NombreModulo]\[NombreEscenario]**  **NombreModulo** ej: tag, post,member ect. **NombreEsceario** ej: CrearTagPositivo, CrearTagNegativo
