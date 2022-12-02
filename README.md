@@ -68,6 +68,14 @@ Para el reporte de comparación de los screenshots de las Pruebas VRT se utiliza
    - **Screnshots 5.18**: **PruebasE2E\VRT\Ghost-test-Playwright\Ghost-5.18\resultado\[NombreModulo]\[NombreEscenario]**  **NombreModulo** ej: tag, post,member ect. **NombreEsceario** ej: CrearTagPositivo, CrearTagNegativo
    - **Screenshots Resultantes** : **PruebasE2E\VRT\Ghost-PruebasDeRegresion\results\playwright\[YYYY-MM-DDThh.mm.ssZ]** (Nota: identificar el directorio con el nombre con fecha y hora mas reciente)
    - **Reporte HTML** : **PruebasE2E\VRT\Ghost-PruebasDeRegresion\results\playwright\[YYYY-MM-DDThh.mm.ssZ]\report** (Nota: En este directorio encontrará un reporte en html) por cada escenario de prueba
+  
+  
+  
+   
+**3. Pruebas de Reconocimiento**
+***********************
+
+
 
 
 
