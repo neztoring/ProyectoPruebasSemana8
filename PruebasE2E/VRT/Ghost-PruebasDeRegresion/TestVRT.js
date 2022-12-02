@@ -151,6 +151,7 @@ async function compareImageTest(){
   
           fs.writeFileSync(`./results/playwright/${datetime}/report/report_${nombreEscenario}.html`, createReport(datetime, resultInfo));
           fs.copyFileSync('./index.css', `./results/playwright/${datetime}/report/index.css`);
+          resultInfo = [];
       }
   
       console.log('------------------------------------------------------------------------------------')
