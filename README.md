@@ -8,4 +8,4 @@ Descripción del contenido del repo:
 
 2. El directorio **PruebasrReconcimiento** contiene las **Pruebas de Reconocimiento Aleatorias/Exploratorias**
 
-3. El directorio **Pruebas Manuales** **contiene la Pruebas Manuales**
+3. El directorio **Pruebas Manuales** contiene la **Pruebas Manuales**
