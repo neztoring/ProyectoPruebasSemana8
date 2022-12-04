@@ -88,18 +88,18 @@ A continuación se describen los pasos para la ejecución de las pruebas con gen
 ***********************
 **Instrucciones para ejecutar las pruebas de reconocimiento usando Monkey testing con Cypress**
 
-    1. Abrir una terminal y usar el comando cd para llegar a la carpeta *PruebasrReconocimiento*.
+    1. Abrir una terminal y usar el comando cd para llegar a la carpeta *\PruebasrReconocimiento*.
     2. Usar el comando npm install para instalar las dependencias necesarias para correr las pruebas.(Este paso puede tardar debido a que se descarga Cypress)
     3. Cambiar en el archivo PruebasrReconocimiento/cypress/integration/monkey/smart-monkey.js los valores de USERNAME y PASSWORD con los accesos de su cuenta de ghost.
     4. En un cmd ubicarse en el directorio PruebasrReconocimiento y correr el comando npx cypress run para correr el monkey test
-    5. Los resultados se encontrarán en el archivo PruebasrReconocimiento/results/monkey-execution.html
-    6. Se pueden encontrar los videos en la carpeta PruebasrReconocimiento/cypress/videos
+    5. Los resultados se encontrarán en el archivo /PruebasrReconocimiento/results/monkey-execution.html
+    6. Se pueden encontrar los videos en la carpeta /PruebasrReconocimiento/cypress/videos
 
 **Instrucciones para ejecutar las pruebas de reconocimiento usando Ripper testing con Pupeteerr**
 
-    1. Abrir una terminal y usar el comando cd para llegar a la carpeta pruebas de reconocimiento.
-    2. Usar el comando npm install para instalar las dependencias necesarias para correr las pruebas.(Este paso puede tardar debido a que se descarga Cypress)
-    3. Cambiar en el archivo config.json los valores de indentification y password con los accesos de su cuenta de ghost.
+    1. Abrir una terminal y usar el comando cd para llegar a la carpeta  *\PruebasrReconocimiento*.
+    2. Usar el comando npm install para instalar las dependencias necesarias para correr las pruebas.(Este paso puede tardar debido a que se descarga Playwright)
+    3. Cambiar en el archivo  *\PruebasrReconocimiento\config.json* los valores de indentification y password con los accesos de su cuenta de ghost.
     4. Correr el comando node index.js para correr el monkey test
-    5. Los resultados se encontraran en la carpeta results
+    5. Los resultados se encontraran en la carpeta  *\PruebasrReconocimiento\results*
 
