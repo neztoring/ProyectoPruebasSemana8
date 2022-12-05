@@ -7,7 +7,6 @@
 
 - El directorio [PruebasReconcimiento](https://github.com/neztoring/ProyectoPruebasSemana8/tree/main/PruebasrReconocimiento) contiene las [Pruebas de Reconocimiento Aleatorias/Exploratorias](#pruebas-de-reconocimiento)
 
-- El directorio [Pruebas Manuales](https://github.com/neztoring/ProyectoPruebasSemana8/tree/main/PruebasManuales) contiene la [Pruebas Manuales]()
 
 ****
 ## Pruebas E2E:
